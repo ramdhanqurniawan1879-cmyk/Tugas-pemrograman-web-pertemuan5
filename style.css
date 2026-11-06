@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 16px;
+    background: #144e79;
+    color: white;
+}
+
+.logo {
+    margin: 0;
+}
+
+.navigasi-flex {
+    display: flex; 
+    justify-content: flex-start; /* Menempel di sisi kiri halaman */
+    gap: 20px; /* Jarak antar tautan 20px */
+    padding: 16px; /* Memberi jarak dari tepi layar */
+    background-color: #f0f0f0;
+}
+
+.navigasi-flex a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 16px;
+}
+
+/* Galeri Grid (Tugas d) */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom sama lebar */
+    gap: 12px; /* Jarak 12px */
+    margin-top: 16px;
+}
+
+.galeri-grid img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; /* Agar gambar tidak keluar kolom */
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    padding: 16px;
+    background: #eeeeee;
+}
+
+@media (max-width: 599px) {
+    .navigasi-flex {
+        flex-direction: column; /* Di HP, menu menumpuk ke bawah */
+        align-items: flex-start;
+    }
+    
+    .galeri-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (min-width: 600px) {
+    .galeri-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 992px) {
+    .galeri-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
